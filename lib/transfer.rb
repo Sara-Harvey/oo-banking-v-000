@@ -9,7 +9,7 @@ def initialize(sender, receiver, amount)
 end
 
 def valid?
-  sender.valid? == true && receiver.valid? == true
+  self.sender.valid? == true && self.receiver.valid? == true
 end
 
 def execute_transaction
