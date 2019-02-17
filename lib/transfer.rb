@@ -13,7 +13,7 @@ def valid?
 end
 
 def execute_transaction
-  if self.valid? && if self.status = "pending"
+  if @sender.balance && if self.status = "pending"
     
   
     
