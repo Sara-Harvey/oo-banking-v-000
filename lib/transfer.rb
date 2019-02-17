@@ -21,6 +21,7 @@ def execute_transaction
     else
       self.status = "rejected"
       "Transaction rejected. Please check your account balance."
+    end
   else 
     self.status = "rejected"
     "Transaction rejected. Please check your account balance."
