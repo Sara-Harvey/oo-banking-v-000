@@ -23,6 +23,7 @@ def execute_transaction
 end
 end
 
-
-
+def reverse_transfer
+  @receiver.balance -= amount
+  @sender.balance += amount
 end
