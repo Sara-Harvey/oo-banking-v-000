@@ -14,13 +14,16 @@ end
 
 def execute_transaction
   if self.valid? && self.status = "pending"
-    
-  self.sender.balance -= amount
-  self.receiver.deposit(amount)
-  self.status = "complete"
-else
-  self.status = "rejected"
-  "Transaction rejected. Please check your account balance."
+    if amount < self.sender.balance
+      self.sender.balance -= amount
+      self.receiver.deposit(amount)
+      self.status = "complete"
+    else
+      self.status = "rejected"
+      "Transaction rejected. Please check your account balance."
+  else 
+    self.status = "rejected"
+    "Transaction rejected. Please check your account balance."
 end
 end
 end
