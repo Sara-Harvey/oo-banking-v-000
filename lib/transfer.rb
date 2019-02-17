@@ -8,7 +8,7 @@ def initialize(sender, receiver, amount)
   @amount = amount
 end
 
-def valid?(bankaccount)
+def valid?
   self.sender.valid? == true && self.receiver.valid? == true
 end
 
