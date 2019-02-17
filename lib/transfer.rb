@@ -24,12 +24,11 @@ end
 end
 
 def reverse_transfer
-  execute_transaction
+  if @status = "complete"
   @receiver.balance -= amount
   @sender.balance += amount
   @status = "reversed"
 end
-render
 end
 
 end
