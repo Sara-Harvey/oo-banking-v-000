@@ -14,8 +14,8 @@ end
 
 def execute_transaction
   if self.valid? && self.status = "pending"
-  sender.balance -= amount
-  receiver.deposit(amount)
+  self.sender.balance -= amount
+  self.receiver.deposit(amount)
   self.status = "complete"
 else
   self.status = "rejected"
