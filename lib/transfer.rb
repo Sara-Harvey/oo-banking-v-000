@@ -14,10 +14,6 @@ end
 
 def execute_transaction
   if @sender.balance > amount && @status == "pending"
-    
-  
-    
-    && if self.sender.balance > self.amount == true
       self.sender.balance -= amount
       self.receiver.deposit(amount)
       self.status = "complete"
